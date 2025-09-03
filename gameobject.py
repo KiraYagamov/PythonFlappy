@@ -1,10 +1,10 @@
 import pygame
 import config
 from vector import Vector2
-from scene_data import SceneData
+from game_controller import GameController
 
 class GameObject:
-    def __init__(self, screen, position: Vector2, size: Vector2, sprites_paths: str, has_gravity=True):
+    def __init__(self, screen, scene, position: Vector2, size: Vector2, sprites_paths: str, has_gravity=True):
         self.position = position
         self.size = size
         self.sprites = []
@@ -16,7 +16,7 @@ class GameObject:
         self.velocity = Vector2(0, 0)
         self.has_gravity = has_gravity
         self.mask = pygame.mask.from_surface(self.sprites[0])
-        SceneData.game_objects_pool.append(self)
+        scene.scene_data.game_objects_pool.append(self)
 
     def draw(self):
         self.screen.blit(self.sprites[self.current_sprite], (self.position.x, self.position.y))

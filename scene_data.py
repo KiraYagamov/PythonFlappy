@@ -1,14 +1,6 @@
 class SceneData:
-    game_over = False
-    points = 0
-    FPS = 60
-    game_objects_pool = []
-    time_scale = 1
-
-    @classmethod
-    def get_points(cls):
-        return cls.points
-
-    @classmethod
-    def set_points(cls, new_value):
-        cls.points = new_value
+    def __init__(self):
+        self.FPS = 60
+        self.game_objects_pool = []
+        self.buttons_pool = []
+        self.time_scale = 1
