@@ -1,7 +1,6 @@
 import pygame
 import config
 from vector import Vector2
-from game_controller import GameController
 
 class GameObject:
     def __init__(self, screen, scene, position: Vector2, size: Vector2, sprites_paths: str, has_gravity=True):

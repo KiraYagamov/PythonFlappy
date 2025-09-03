@@ -1,7 +1,5 @@
 import pygame
-import config
 from vector import Vector2
-from game_controller import GameController
 
 pygame.font.init()
 
