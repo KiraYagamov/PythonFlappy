@@ -1,0 +1,14 @@
+{
+    "gravity": 10,
+    "screen_size": [500, 800],
+    "scenes": [
+        {
+            "file_name": "menu_scene",
+            "class_name": "MenuScene"
+        },
+        {
+            "file_name": "game_scene",
+            "class_name": "GameScene"
+        }
+    ]
+}

@@ -1,5 +1,5 @@
 import pygame
-from vector import Vector2
+from engine.vector import Vector2
 
 pygame.font.init()
 

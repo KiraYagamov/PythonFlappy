@@ -1,7 +1,7 @@
 import pygame
-from gameobject import GameObject
-from vector import Vector2
-from game_controller import GameController
+from engine.gameobject import GameObject
+from engine.vector import Vector2
+from engine.game_controller import GameController
 
 class SceneControls:
     def move_objects(delta_time: float):

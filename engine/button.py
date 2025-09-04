@@ -1,6 +1,6 @@
-from vector import Vector2
+from engine.vector import Vector2
+from engine.game_controller import GameController
 import pygame
-from game_controller import GameController
 
 class Button:
 

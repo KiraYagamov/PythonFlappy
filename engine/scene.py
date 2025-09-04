@@ -1,4 +1,4 @@
-from scene_data import SceneData
+from engine.scene_data import SceneData
 import pygame
 
 class Scene:

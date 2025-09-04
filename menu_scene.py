@@ -1,13 +1,6 @@
-from scene import Scene
+from engine import Scene, GameController, Vector2, SceneControls, Button, GameObject, SceneLoader, config
 import pygame
-from game_controller import GameController
-from vector import Vector2
 import sys
-from scene_controls import SceneControls
-from button import Button
-from scene_loader import SceneLoader
-from gameobject import GameObject
-import config
 
 class MenuScene(Scene):
     def __init__(self):

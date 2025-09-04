@@ -1,14 +1,7 @@
-from scene import Scene
 import pygame
-from gameobject import GameObject
-from text import Text
-from game_controller import GameController
-from vector import Vector2
+from engine import GameObject, Text, Scene, GameController, Vector2, SceneControls, config, SceneLoader
 import sys
 from random import randint
-from scene_controls import SceneControls
-from scene_loader import SceneLoader
-import config
 
 class GameScene(Scene):
 

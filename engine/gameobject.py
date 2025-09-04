@@ -1,9 +1,9 @@
 import pygame
-import config
-from vector import Vector2
+import engine.config as config
+from engine.vector import Vector2
 
 class GameObject:
-    def __init__(self, screen, scene, position: Vector2, size: Vector2, sprites_paths: str, has_gravity=True):
+    def __init__(self, screen, scene, position: Vector2, size: Vector2, sprites_paths: list[str], has_gravity=True):
         self.position = position
         self.size = size
         self.sprites = []
