@@ -26,8 +26,8 @@ class GameScene(Scene):
         self.pipe_top = GameObject(GameController.current_screen, self, Vector2(1000, -200), Vector2(100, 500), ["sprites/Enemy.png"], False)
         self.pipe_bottom = GameObject(GameController.current_screen, self, Vector2(1000, 500), Vector2(100, 500), ["sprites/Enemy.png"], False)
         self.pipe_bottom.flip(False, True)
-        self.points_text = Text(GameController.current_screen, self, Vector2(350, 0), 'Comic Sans MS', f"Points: {self.points}")
-        self.points_record_text = Text(GameController.current_screen, self, Vector2(20, 0), 'Comic Sans MS', f"Record: {GameController.points_record}")
+        self.points_text = Text(GameController.current_screen, self, Vector2(350, 0), 'fonts/Pangolin-Regular.ttf', f"Счёт: {self.points}", 30, False)
+        self.points_record_text = Text(GameController.current_screen, self, Vector2(20, 0), 'fonts/Pangolin-Regular.ttf', f"Рекорд: {GameController.points_record}", 30, False)
 
         # Start values of some game objects
 
@@ -86,7 +86,7 @@ class GameScene(Scene):
             self.pipe_top.position.y = -200 + y_move_delta
             self.pipe_bottom.position.y = 500 + y_move_delta
             self.points += 1
-            self.points_text.text = f"Points: {self.points}"
+            self.points_text.text = f"Счёт: {self.points}"
 
     def check_collisions(self):
         collision_upper = self.player.mask.overlap(self.pipe_top.mask, self.player.offset(self.pipe_top.position))

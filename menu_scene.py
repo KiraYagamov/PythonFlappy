@@ -19,7 +19,8 @@ class MenuScene(Scene):
             Vector2(200, 70), 36, 
             "Играть", 
             (129,227,140), (255, 255, 255),
-            'Comic Sans MS'
+            'fonts/Pangolin-Regular.ttf',
+            False
         )
 
         def on_click_play():
@@ -33,7 +34,8 @@ class MenuScene(Scene):
             Vector2(200, 70), 36, 
             "Выйти", 
             (129,227,140), (255, 255, 255),
-            'Comic Sans MS'
+            'fonts/Pangolin-Regular.ttf',
+            False
         )
 
         def on_click_exit():

@@ -4,7 +4,7 @@ import pygame
 
 class Button:
 
-    def __init__(self, screen, scene, position: Vector2, size: Vector2, font_size: int, text: str, button_color, text_color, font_style: str = None):
+    def __init__(self, screen, scene, position: Vector2, size: Vector2, font_size: int, text: str, button_color, text_color, font_style: str = None, system_font=True):
         self.position = position
         self.size = size
         self.screen = screen
@@ -14,7 +14,10 @@ class Button:
 
         self.button_rect = pygame.Rect(position.x, position.y, size.x, size.y)
 
-        self.font = pygame.font.SysFont(font_style, self.font_size)
+        if system_font:
+            self.font = pygame.font.SysFont(font_style, self.font_size)
+        else:
+            self.font = pygame.font.Font(font_style, self.font_size)
         self.text_surface = self.font.render(text, True, self.text_color)
         self.text_rect = self.text_surface.get_rect(center=self.button_rect.center)
 
